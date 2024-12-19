@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miligold Token Tracker</title>
+    <style>
+        *{
+            font-family: "Courier";
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            display: flex;
+            padding: 1rem;
+        }
+        .token{
+            color: gold;
+            margin-right: 1rem;
+        }
+        .worth{
+            color: red;
+        }
+        main{
+            padding: 1rem 2rem;
+        }
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="flex flex-col lg:flex-row">
+        <h3 class="font-bold" style="margin-right: auto;">MILIGOLD TOKEN ($mg)</h3>
+        <a onclick="produce()" style="margin-right: 1rem;">Add Block</a>
+        <a onclick="redeem()" style="margin-right: 1rem;">Redeem Block</a>
+        <h3 class="token font-bold">Circulating Supply: 0 mg</h3>
+        <h3 class="worth font-bold ">Net Worth: 0 mg</h3>
+    </header>
+    <main>
+        <ul class="list-disc divide-gray-300 divide-y">
+            
+        </ul>
+    </main>
+    
+    <script src="/src/miligold.js"></script>
+</body>
+</html>
